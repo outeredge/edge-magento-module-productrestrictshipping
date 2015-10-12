@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Edge_ProductRestrictShipping>
+            <version>1.0.0</version>
+        </Edge_ProductRestrictShipping>
+    </modules>
+
+    <frontend>
+        <events>
+            <controller_action_predispatch>
+                <observers>
+                    <edge_product_restrict_shipping_verify>
+                        <type>singleton</type>
+                        <class>Edge_ProductRestrictShipping_Model_Observer</class>
+                        <method>saveShippingActionPredispatch</method>
+                    </edge_product_restrict_shipping_verify>
+                </observers>
+            </controller_action_predispatch>
+        </events>
+    </frontend>
+</config>

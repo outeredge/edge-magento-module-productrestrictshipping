@@ -1,0 +1,21 @@
+{
+    "name": "outeredge/edge-magento-module-productrestrictshipping",
+    "type": "magento-module",
+    "description": "Product Restrict Shipping Module by outer/edge",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "outer/edge",
+            "email": "support@outeredgeuk.com"
+        }
+    ],
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    },
+    "extra": {
+        "map": [
+            ["app/code/local/Edge/ProductRestrictShipping", "app/code/local/Edge/ProductRestrictShipping"],
+            ["app/etc/modules/Edge_ProductRestrictShipping.xml", "app/etc/modules/Edge_ProductRestrictShipping.xml"]
+        ]
+    }
+}
