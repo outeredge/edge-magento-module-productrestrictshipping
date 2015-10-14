@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <catalog>
+            <children>
+                <productrestrictshipping module="productrestrictshipping">
+                    <sort_order>1000</sort_order>
+                    <title>Product Restrict Shipping</title>
+                    <action>adminhtml/restrict/</action>
+                </productrestrictshipping>
+            </children>
+        </catalog>
+    </menu>
+</config>

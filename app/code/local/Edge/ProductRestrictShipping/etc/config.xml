@@ -5,7 +5,52 @@
             <version>1.0.0</version>
         </Edge_ProductRestrictShipping>
     </modules>
-
+    <global>
+        <models>
+            <productrestrictshipping>
+                <class>Edge_ProductRestrictShipping_Model</class>
+                <resourceModel>productrestrictshipping_resource</resourceModel>
+            </productrestrictshipping>
+            <productrestrictshipping_resource>
+                <class>Edge_ProductRestrictShipping_Model_Resource</class>
+                <entities>
+                    <productRestrictShipping>
+                        <table>productrestrictshipping</table>
+                    </productRestrictShipping>
+                </entities>
+            </productrestrictshipping_resource>
+        </models>
+        <resources>
+            <productrestrictshipping_setup>
+                <setup>
+                    <module>Edge_ProductRestrictShipping</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </productrestrictshipping_setup>
+            <productrestrictshipping_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </productrestrictshipping_read>
+            <productrestrictshipping_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </productrestrictshipping_write>
+        </resources>
+        <helpers>
+            <productrestrictshipping>
+                <class>Edge_ProductRestrictShipping_Helper</class>
+            </productrestrictshipping>
+        </helpers>
+        <blocks>
+            <productrestrictshipping>
+                <class>Edge_ProductRestrictShipping_Block</class>
+            </productrestrictshipping>
+        </blocks>
+    </global>
     <frontend>
         <events>
             <controller_action_predispatch>
@@ -19,4 +64,15 @@
             </controller_action_predispatch>
         </events>
     </frontend>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <productrestrictshipping before="Mage_Adminhtml">Edge_ProductRestrictShipping_Adminhtml</productrestrictshipping>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
 </config>
