@@ -42,9 +42,11 @@ class Edge_ProductRestrictShipping_Model_Observer
                 $text = $product->getAttributeText($restriction['attribute_code']);
 
                 if ($text == $restriction['attribute_value']) {
-                    //Mage::throwException("You can't buy this product because you're shipping to the wrong place!");
-                     Mage::getSingleton('core/session')->addError('balblab');
 
+                    $productName = $item->getProduct()->getName();
+                    Mage::getSingleton('core/session')->addError("The product ". $productName. " is not available in your country.");
+                    http_response_code(500);
+                    die();
                 }
 
             }
