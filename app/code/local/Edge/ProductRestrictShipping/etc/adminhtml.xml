@@ -11,4 +11,23 @@
             </children>
         </catalog>
     </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <prshipping translate="title" module="productrestrictshipping">
+                                        <title>Product Restrict Shipping</title>
+                                    </prshipping>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
 </config>

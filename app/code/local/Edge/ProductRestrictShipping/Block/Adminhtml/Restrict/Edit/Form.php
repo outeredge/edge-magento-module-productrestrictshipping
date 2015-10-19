@@ -12,6 +12,11 @@ class Edge_ProductRestrictShipping_Block_Adminhtml_Restrict_Edit_Form extends Ma
 
         $this->setId('productrestrictshipping_id_form');
         $this->setTitle($this->__('Product Restiction Shipping Information'));
+
+        if (!empty(Mage::getStoreConfig('prshipping/prshipping/options'))) {
+            $this->preSelectedAttributeSet = Mage::getStoreConfig('prshipping/prshipping/options');
+        }
+
     }
 
     /**
@@ -54,17 +59,11 @@ class Edge_ProductRestrictShipping_Block_Adminhtml_Restrict_Edit_Form extends Ma
             'required' => true
         ));
 
-        $attributes = Mage::getResourceModel('catalog/product_attribute_collection')->getItems();
-        $allCodeAttributes = [''];
-        foreach ($attributes as $attribute) {
-             $allCodeAttributes[$attribute->getAttributeCode()] = $attribute->getAttributeCode();
-        }
-
         $attributeCode = $fieldset->addField('attribute_code', 'select', array(
             'name'      => 'attribute_code',
             'label'     => Mage::helper('productrestrictshipping/data')->__('Attribute Code'),
             'title'     => Mage::helper('productrestrictshipping/data')->__('Attribute Code'),
-            'values'    => $allCodeAttributes,
+            'values'    => ['', $this->preSelectedAttributeSet => $this->preSelectedAttributeSet],
             'required'  => true
         ));
 
