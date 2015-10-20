@@ -48,7 +48,7 @@ class Edge_ProductRestrictShipping_Block_Adminhtml_Restrict_Edit_Form extends Ma
         $countryCollection = Mage::getModel('directory/country')->getCollection();
         $allCountry = [''];
         foreach($countryCollection as $country) {
-            $allCountry[$country->getId()] = $country->getId();
+            $allCountry[$country->getId()] = $country->getName();
         }
 
         $country = $fieldset->addField('country_id', 'select', array(
