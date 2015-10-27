@@ -1,9 +1,16 @@
 <?xml version="1.0"?>
 <config>
+    <tabs>
+        <edge translate="label" module="productrestrictshipping">
+            <label>outer/edge</label>
+            <sort_order>200</sort_order>
+        </edge>
+    </tabs>
     <sections>
         <prshipping translate="label" module="productrestrictshipping">
+            <class>separator-top</class>
             <label>Product Restrict Shipping</label>
-            <tab>catalog</tab>
+            <tab>edge</tab>
             <sort_order>1000</sort_order>
             <show_in_default>1</show_in_default>
             <show_in_website>1</show_in_website>
