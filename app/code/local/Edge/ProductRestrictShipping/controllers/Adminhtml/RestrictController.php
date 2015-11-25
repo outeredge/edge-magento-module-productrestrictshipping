@@ -2,6 +2,11 @@
 
 class Edge_ProductRestrictShipping_Adminhtml_RestrictController extends Mage_Adminhtml_Controller_Action
 {
+    protected function _isAllowed()
+    {
+        return Mage::getSingleton('admin/session')->isAllowed('catalog/productrestrictshipping');
+    }
+    
     public function indexAction()
     {
         $this->_title($this->__('Catalog'))->_title($this->__('Product Restrict Shipping'));
