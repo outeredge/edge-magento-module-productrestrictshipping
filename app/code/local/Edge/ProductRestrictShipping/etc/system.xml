@@ -17,7 +17,7 @@
             <show_in_store>1</show_in_store>
             <groups>
                 <prshipping translate="label comment">
-                    <label>Productrestrictshipping</label>
+                    <label>Product Shipping Restrictions</label>
                     <sort_order>100</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
