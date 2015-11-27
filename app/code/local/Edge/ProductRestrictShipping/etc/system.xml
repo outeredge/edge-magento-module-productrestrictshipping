@@ -9,7 +9,7 @@
     <sections>
         <prshipping translate="label" module="productrestrictshipping">
             <class>separator-top</class>
-            <label>Product Restrict Shipping</label>
+            <label>Product Shipping Restrictions</label>
             <tab>edge</tab>
             <sort_order>1000</sort_order>
             <show_in_default>1</show_in_default>
@@ -17,7 +17,7 @@
             <show_in_store>1</show_in_store>
             <groups>
                 <prshipping translate="label comment">
-                    <label>Product Shipping Restrictions</label>
+                    <label>General</label>
                     <sort_order>100</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
@@ -33,6 +33,15 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </options>
+                        <message translate="label comment">
+                            <label>Message</label>
+                            <comment>Message shown to customer when product cannot be shipped.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </message>
                     </fields>
                 </prshipping>
             </groups>

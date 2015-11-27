@@ -42,9 +42,12 @@ class Edge_ProductRestrictShipping_Model_Observer
                 $text = $product->getAttributeText($restriction['attribute_code']);
 
                 if ($text == $restriction['attribute_value']) {
-
-                    $productName = $item->getProduct()->getName();
-                    Mage::getSingleton('core/session')->addError("The product ". $productName. " is not available in your country.");
+                    if(Mage::getStoreConfig('prshipping/prshipping/message')) {
+                        $msg = Mage::getStoreConfig('prshipping/prshipping/message');
+                    }
+                    else {
+                        $msg = $item->getProduct()->getName(). " is not available in your country.";
+                    }
                     http_response_code(500);
                     die();
                 }
