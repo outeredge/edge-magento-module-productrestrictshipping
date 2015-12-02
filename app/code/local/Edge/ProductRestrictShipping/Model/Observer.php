@@ -48,6 +48,7 @@ class Edge_ProductRestrictShipping_Model_Observer
                     else {
                         $msg = $item->getProduct()->getName(). " is not available in your country.";
                     }
+                    Mage::getSingleton('core/session')->addError($msg);
                     http_response_code(500);
                     die();
                 }
